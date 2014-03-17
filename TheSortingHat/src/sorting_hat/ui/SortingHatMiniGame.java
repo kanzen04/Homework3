@@ -35,7 +35,7 @@ import sorting_hat.data.SortingHatRecord;
  * This is the actual mini game, as extended from the mini game framework. It
  * manages all the UI elements.
  * 
- * @author Richard McKenna
+ * @author Richard McKenna and Dawa Lama
  */
 public class SortingHatMiniGame extends MiniGame
 {
@@ -151,6 +151,8 @@ public class SortingHatMiniGame extends MiniGame
         // ACTIVATE THE TOOLBAR AND ITS CONTROLS
         guiButtons.get(NEW_GAME_BUTTON_TYPE).setState(SortingHatTileState.VISIBLE_STATE.toString());
         guiButtons.get(NEW_GAME_BUTTON_TYPE).setEnabled(true);
+        guiButtons.get(BACK_BUTTON_TYPE).setState(SortingHatTileState.VISIBLE_STATE.toString());
+        guiButtons.get(BACK_BUTTON_TYPE).setEnabled(true);
         guiDecor.get(MISCASTS_COUNT_TYPE).setState(SortingHatTileState.VISIBLE_STATE.toString());
         guiDecor.get(TIME_TYPE).setState(SortingHatTileState.VISIBLE_STATE.toString());
         guiButtons.get(STATS_BUTTON_TYPE).setState(SortingHatTileState.VISIBLE_STATE.toString());
@@ -368,6 +370,15 @@ public class SortingHatMiniGame extends MiniGame
         sT.addState(SortingHatTileState.MOUSE_OVER_STATE.toString(), img);
         s = new Sprite(sT, NEW_BUTTON_X, NEW_BUTTON_Y, 0, 0, SortingHatTileState.INVISIBLE_STATE.toString());
         guiButtons.put(NEW_GAME_BUTTON_TYPE, s);
+        
+        // AND THE BACK BUTTON
+        // need to check if it works
+        String backButton = props.getProperty(SortingHatPropertyType.IMAGE_BUTTON_BACK);
+        sT = new SpriteType(BACK_BUTTON_TYPE);
+        img = loadImage(imgPath + backButton);
+        sT.addState(SortingHatTileState.VISIBLE_STATE.toString(), img);
+        s = new Sprite(sT, BACK_BUTTON_X, BACK_BUTTON_Y, 0, 0, SortingHatTileState.INVISIBLE_STATE.toString());
+        guiButtons.put(BACK_BUTTON_TYPE, s);
         
         // AND THE MISCASTS COUNT
         String miscastCountContainer = props.getProperty(SortingHatPropertyType.IMAGE_DECOR_MISCASTS);

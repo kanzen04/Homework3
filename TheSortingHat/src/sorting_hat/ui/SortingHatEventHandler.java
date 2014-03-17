@@ -53,7 +53,21 @@ public class SortingHatEventHandler
         // RESET THE GAME AND ITS DATA
         game.reset();        
     }
-
+    
+    /**
+     * Called when the user clicks the Back button
+     * This button takes the user back to the main menu
+     */
+    public void respondToBackRequest()
+    {
+        if(game.getDataModel().inProgress())
+            game.getDataModel().endGameAsLoss();
+        if(game.getDataModel().won())
+        {
+            
+        }
+            // go to main menu
+    }
     /**
      * Called when the user clicks a button to select a level.
      */    

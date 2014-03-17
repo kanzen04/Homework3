@@ -10,6 +10,8 @@
         <property name="IMAGE_BACKGROUND_GAME"              value="./sorting_hat/BackgroundGame.png"></property>
         <property name="IMAGE_BACKGROUND_MENU"              value="./sorting_hat/BackgroundMenu.png"></property>
         <property name="IMAGE_BUTTON_NEW"                   value="./sorting_hat/ButtonNewGame.png"></property>
+        <property name="IMAGE_BUTTON_BACK"                  VALUE="./sorting_hat/
+            ButtonBack.png"></property>
         <property name="IMAGE_BUTTON_NEW_MOUSE_OVER"        value="./sorting_hat/ButtonNewGameMouseOver.png"></property>
         <property name="IMAGE_BUTTON_STATS"                 value="./sorting_hat/ButtonStats.png"></property>
         <property name="IMAGE_BUTTON_STATS_MOUSE_OVER"      value="./sorting_hat/ButtonStatsMouseOver.png"></property>
@@ -64,6 +66,8 @@
         <property_options name="LEVEL_IMAGE_OPTIONS">
             <option>./sorting_hat/ButtonBubbleSortCoil.png</option>
             <option>./sorting_hat/ButtonBubbleSortO.png</option>
+            <option>./sorting_hat/ButtonSelectionSortS.png</option>
+            <option>./sorting_hat/ButtonSelectionSortInverse3.png</option>
         </property_options>
         <property_options name="LEVEL_MOUSE_OVER_IMAGE_OPTIONS">
             <option>./sorting_hat/ButtonBubbleSortCoilMouseOver.png</option>
