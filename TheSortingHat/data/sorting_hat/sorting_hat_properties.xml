@@ -58,6 +58,8 @@
         <property_options name="LEVEL_OPTIONS">
             <option>./sorting_hat/BubbleSortCoil.sort</option>
             <option>./sorting_hat/BubbleSortO.sort</option>
+            <option>./sorting_hat/SelectionSortS.sort</option>
+            <option>./sorting_hat/SelectionSortInverse3.sort</option>
         </property_options>
         <property_options name="LEVEL_IMAGE_OPTIONS">
             <option>./sorting_hat/ButtonBubbleSortCoil.png</option>

@@ -8,7 +8,7 @@ import sorting_hat.ui.SortingHatTile;
  * This factory class builds the sorting algorithm objects to be
  * used for sorting in the game.
  *
- * @author Richard McKenna & _____________________
+ * @author Richard McKenna & Dawa Lama
  */
 public class SortingHatAlgorithmFactory
 {
@@ -28,6 +28,7 @@ public class SortingHatAlgorithmFactory
         {
             premadeSortingHatAlgorithms = new HashMap();
             premadeSortingHatAlgorithms.put(SortingHatAlgorithmType.BUBBLE_SORT,    new BubbleSortAlgorithm(initDataToSort,        algorithmType.toString()));
+            premadeSortingHatAlgorithms.put(SortingHatAlgorithmType.SELECTION_SORT,    new SelectionSortAlgorithm(initDataToSort,        algorithmType.toString()));
         }
         // RETURN THE REQUESTED ONE
         return premadeSortingHatAlgorithms.get(algorithmType);
@@ -80,6 +81,68 @@ class BubbleSortAlgorithm extends SortingHatAlgorithm
                     copy.set(j, copy.get(j+1));
                     copy.set(j+1, temp);
                 }
+            }
+        }
+        return transactions;
+    }
+}
+/**
+ * This class builds all the transactions necessary for selection sort
+ * on the data structure. 
+ */
+
+// STILL NEED TO FIX THE ALGORITHM
+
+class SelectionSortAlgorithm extends SortingHatAlgorithm
+{
+    /**
+     * Constructor only needs to init the inherited stuff.
+     */
+    public SelectionSortAlgorithm(ArrayList<SortingHatTile> initDataToSort, String initName)
+    {
+        // INVOKE THE PARENT CONSTRUCTOR
+        super(initDataToSort, initName);
+    }
+    
+    /**
+     * Build and return all the transactions necessary to sort using selection sort.
+     */
+    public ArrayList<SortTransaction> generateSortTransactions()
+    {
+        // HERE'S THE LIST OF TRANSACTIONS
+        ArrayList<SortTransaction> transactions = new ArrayList();
+        
+        // FIRST LET'S COPY THE DATA TO A TEMPORARY ArrayList
+        ArrayList<SortingHatTile> copy = new ArrayList();
+        for (int i = 0; i < dataToSort.size(); i++)
+            copy.add(dataToSort.get(i));
+        int iMin, n;
+        n = copy.size();
+
+        //ADVANCE THE POSITION THROUGH THE ENTIRE ARRAY.
+        // NOW SORT THE TEMPORARY DATA STRUCTURE
+        for(int j = 0; j < n; j++)
+        {
+            //assume min is the first element
+            iMin = j;
+            //test to find the smallest element
+            for (int i = j+1; i <= n; i++)
+            {
+                //if the next element is less than the min, it is the new min
+                if(copy.get(i).getID() < copy.get(iMin).getID() ){
+                    iMin = i;
+                }
+                // BUILD AND KEEP THE TRANSACTION
+                // Keep track of the elements that have been swapped
+                    SortTransaction sT = new SortTransaction(i-1, i);
+                    transactions.add(sT);
+            }
+            //iMin is the index of the minimum element. Swap with the current position.
+            if(iMin !=j)
+            {
+                SortingHatTile temp = copy.get(j);
+                    copy.set(j, copy.get(j+1));
+                    copy.set(j+1, temp);
             }
         }
         return transactions;

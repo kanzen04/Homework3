@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/data/SortingHatAlgorithmFactory.java</file>
             <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/TheSortingHat.java</file>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/data/SortingHatAlgorithmType.java</file>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/data/SnakeCell.java</file>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/SortingHatConstants.java</file>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/data/SortTransaction.java</file>
             <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/data/SortingHatAlgorithm.java</file>
+            <file>file:/Users/kanzen/NetBeansProjects/LamaDawaHW3/TheSortingHat/src/sorting_hat/ui/SortingHatMiniGame.java</file>
         </group>
     </open-files>
 </project-private>
